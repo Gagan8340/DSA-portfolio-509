@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .section {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      background-color: #fff;
+    }
+
+    .name-section {
+      background-color: #fdd9d9;
+      text-align: center;
+      padding: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .personal-info {
+      display: flex;
+      align-items: center;
+      background-color: #fbe7d9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .photo {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .details {
+      flex: 3;
+      padding-left: 20px;
+    }
+
+    .course-info, .contact-info, .completion-status,
+    .lab-experiment-status, .solved-problems,
+    .certifications, .nptel-hots, .coding-competitions {
+      background-color: #e6e6e6;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .certifications, .name-section {
+      background-color: #fdd9d9;
+    }
+
+    .coding-competitions {
+      background-color: #d9e7fb;
+    }
+
+    .image-placeholder, .image-upload {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      color: #888;
+      font-size: 1em;
+      margin-top: 10px;
+    }
+
+    .image-placeholder img, .image-upload img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Portfolio</h1>
+  </header>
+
+  <section class="section name-section">
+    <p><strong>[GAGAN SANAGALA]</strong></p>
+  </section>
+
+  <section class="section personal-info">
+    <div class="photo">
+      <p>Photo</p>
+      <div class="image-upload">
+        <input type="file" id="photoInput" accept="image/*" onchange="previewImage(this, 'photoPreview')" style="display: none;">
+        <label for="photoInput" class="image-placeholder" id="photoPreview"><img src="img/img.png" alt="img" class="img"></label>
+      </div>
+    </div>
+    <div class="details">
+      <p>Register Number: RA2311026010509</p>
+      <p>Mail ID: gs5318@srmist.edu.in</p>
+      <p>Department: CSE(AI&ML)</p>
+      <p>Year / Sem / Section: 2024/3/AJ1</p>
+    </div>
+  </section>
+
+  <section class="section course-info">
+    <p>Subject Title: 21CSC201J Data Structures and Algorithms</p>
+    <p>Handled By: Dr. N. Arunachalam</p>
+  </section>
+
+  <section class="section contact-info">
+    <p>Mail: <a  href="mailto:gs5318@srmist.edu.in">Email Me :) </a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/gagan-sanagala-1b4a40337//">Linkedin</a></p>
+    <p>GitHub: <a href="https://github.com/Gagan8340//">Github</a></p>
+  </section>
+
+  <section class="section completion-status">
+    <center><p>E-Lab Completion Status</p></center>
+    <div class="image-upload">
+      <input type="file" id="elabInput" accept="image/*" onchange="previewImage(this, 'elabPreview')" style="display: none;">
+      <label for="elabInput" class="image-placeholder" id="elabPreview"><img src="img/elab.png" alt="elab" class="elab"></label>
+    </div>
+  </section>
+
+  <section class="section lab-experiment-status">
+    <center><p>Lab Experiment Completion Status</p></center>
+    <div class="image-upload">
+      <input type="file" id="labInput" accept="image/*" onchange="previewImage(this, 'labPreview')" style="display: none;">
+      <label for="labInput" class="image-placeholder" id="labPreview"><img src="img/lab.jpg" alt="lab" class="lab"></label>
+    </div>
+  </section>
+
+  <section class="section solved-problems">
+    <center><p>Solved Real World Problem / Conceptual Task</p></center>
+    <div class="image-upload">
+      <input type="file" id="problemInput" accept="image/*" onchange="previewImage(this, 'problemPreview')" style="display: none;">
+      <label for="problemInput" class="image-placeholder" id="problemPreview"><img src="img/bus.png" alt="bus" class="bus"></label>
+    </div>
+  </section>
+
+  <section class="section certifications">
+    <center><p>Certifications (<Udemy>etc.)</p></center>
+    <div class="image-upload">
+      <input type="file" id="certificationInput" accept="image/*" onchange="previewImage(this, 'certificationPreview')" style="display: none;">
+      <label for="certificationInput" class="image-placeholder" id="certificationPreview"><img src="img/udemy.jpg" alt="udemy" class="udemy"></label>
+    </div>
+  </section>
+
+  <section class="section nptel-hots">
+    <center><p>NPTEL</p></center>
+    <div class="image-upload">
+      <input type="file" id="nptelInput" accept="image/*" onchange="previewImage(this, 'nptelPreview')" style="display: none;">
+      <label for="nptelInput" class="image-placeholder" id="nptelPreview"><img src="img/nptel.jpg" alt="nptel" class="nptel"></label>
+    </div>
+  </section>
+
+  <section class="section coding-competitions">
+   <center> <p>Coding Competitions</p></center>
+    <div class="image-upload">
+      <input type="file" id="codingInput" accept="image/*" onchange="previewImage(this, 'codingPreview')" style="display: none;">
+      <label for="codingInput" class="image-placeholder" id="codingPreview"><img src="img/codec.png" alt="codec" class="codec"></label>
+      <label for="codingInput" class="image-placeholder" id="codingPreview"><img src="img/hack.png" alt="hack" class="hack"></label>
+    </div>
+  </section>
+
+  <footer>
+    <center><p>Signature of the Student</p></center>
+    <div class="image-upload">
+      <input type="file" id="SignatureInput" accept="image/*" onchange="previewImage(this, 'SignaturePreview')" style="display: none;">
+      <label for="SignatureInput" class="image-placeholder" id="SignaturePreview"><img src="img/sign.jpg" alt="sign" class="sign"></label>
+    </div>
+  </footer>
+
+  <script>
+    function previewImage(input, previewId) {
+      const previewLabel = document.getElementById(previewId);
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewLabel.innerHTML = '<img src="' + e.target.result + '" alt="Uploaded Image">';
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+  </script>
+</body>
+</html>
